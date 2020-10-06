@@ -8,12 +8,11 @@ import java.util.List;
 public class CityModel {
 
     private String name;
-    private List<AirportModel> airports;
+    private List<AirportModel> airports = new ArrayList<>();
 
-    public CityModel(String name) {
+    public CityModel(String name, List<AirportModel> airports) {
         this.name = name;
-        this.airports = new ArrayList<AirportModel>();
-
+        this.airports = airports;
     }
 
     public CityModel() {
