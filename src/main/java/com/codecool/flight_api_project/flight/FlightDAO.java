@@ -1,5 +1,8 @@
 package com.codecool.flight_api_project.flight;
 
-public class FlightDAO
+import java.util.List;
+
+public interface FlightDAO
 {
+    List<FlightModel> selectAllFlights();
 }

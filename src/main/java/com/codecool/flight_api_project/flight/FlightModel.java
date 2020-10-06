@@ -1,5 +1,7 @@
 package com.codecool.flight_api_project.flight;
 
+import jdk.jfr.DataAmount;
+
 import java.util.Date;
 
 public class FlightModel
@@ -10,11 +12,20 @@ public class FlightModel
     private Date departureDate;
     private Date arrivalDate;
     private double price;
-    private Airline airline;
-    private Airplane airplane;
+//    private Airline airline;
+//    private Airplane airplane;
     private double distanceInKm;
 
-    public FlightModel(String flightNumber, String departureAirport, String arrivalAirport, Date departureDate, Date arrivalDate, double price, Airline airline, Airplane airplane, double distanceInKm)
+    public FlightModel(
+            String flightNumber,
+            String departureAirport,
+            String arrivalAirport,
+            Date departureDate,
+            Date arrivalDate,
+            double price,
+//            Airline airline,
+//            Airplane airplane,
+            double distanceInKm)
     {
         this.flightNumber = flightNumber;
         this.departureAirport = departureAirport;
@@ -22,8 +33,8 @@ public class FlightModel
         this.departureDate = departureDate;
         this.arrivalDate = arrivalDate;
         this.price = price;
-        this.airline = airline;
-        this.airplane = airplane;
+//        this.airline = airline;
+//        this.airplane = airplane;
         this.distanceInKm = distanceInKm;
     }
 
@@ -61,15 +72,15 @@ public class FlightModel
         return price;
     }
 
-    public Airline getAirline()
-    {
-        return airline;
-    }
-
-    public Airplane getAirplane()
-    {
-        return airplane;
-    }
+//    public Airline getAirline()
+//    {
+//        return airline;
+//    }
+//
+//    public Airplane getAirplane()
+//    {
+//        return airplane;
+//    }
 
     public double getDistanceInKm()
     {
@@ -86,8 +97,8 @@ public class FlightModel
                 ", departureDate=" + departureDate +
                 ", arrivalDate=" + arrivalDate +
                 ", price=" + price +
-                ", airline=" + airline +
-                ", airplane=" + airplane +
+//                ", airline=" + airline +
+//                ", airplane=" + airplane +
                 ", distanceInKm=" + distanceInKm +
                 '}';
     }
