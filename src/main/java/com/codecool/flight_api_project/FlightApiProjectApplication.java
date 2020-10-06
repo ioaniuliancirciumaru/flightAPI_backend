@@ -1,4 +1,6 @@
 package com.codecool.flight_api_project;
+import com.codecool.flight_api_project.airline.AirlineModel;
+import com.codecool.flight_api_project.airline.AirlineRepository;
 import com.codecool.flight_api_project.airport.AirportModel;
 import com.codecool.flight_api_project.airport.AirportRepository;
 import com.codecool.flight_api_project.city.CityModel;
@@ -21,6 +23,8 @@ public class FlightApiProjectApplication
 
     public static CityModel cityModel = new CityModel("Rome", Arrays.asList(airportModel));
 
+    public static AirlineModel airlineModel = new AirlineModel("Tarom", "B-737");
+
     public static void main(String[] args)
     {
         FlightRepository fr = new FlightRepository();
@@ -29,6 +33,8 @@ public class FlightApiProjectApplication
         ar.insertAirport(airportModel);
         CityRepository cr = new CityRepository();
         cr.insertCity(cityModel);
+        AirlineRepository airlineRepository = new AirlineRepository();
+        airlineRepository.insertAirline(airlineModel);
         SpringApplication.run(FlightApiProjectApplication.class, args);
     }
 
