@@ -1,10 +1,9 @@
 package com.codecool.flight_api_project.airport;
-
 import com.codecool.flight_api_project.airport.AirportModel;
 import com.codecool.flight_api_project.airport.AirportService;
-import com.codecool.flight_api_project.flight.FlightModel;
-import com.codecool.flight_api_project.flight.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,8 +11,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/airports")
 @CrossOrigin
-public class AirportController
-{
+@Service
+public class AirportController {
+
     @Autowired
     private final AirportService airportService;
 

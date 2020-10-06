@@ -1,8 +1,10 @@
 package com.codecool.flight_api_project.airport;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AirportService{
 
     @Autowired
@@ -21,6 +23,6 @@ public class AirportService{
 
     public  List<AirportModel> allAirports()
     {
-        return AirportRepository.selectAllAirports();
+        return airportRepository.selectAllAirports();
     }
 }
