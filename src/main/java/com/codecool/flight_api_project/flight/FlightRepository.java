@@ -1,6 +1,5 @@
 package com.codecool.flight_api_project.flight;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -11,9 +10,11 @@ public class FlightRepository implements FlightDAO
 {
     private static final List<FlightModel> DB = new ArrayList<>();
 
-    public int insertFlight(FlightModel flight) {
+    public FlightRepository() {
+    }
+
+    public void insertFlight(FlightModel flight) {
         DB.add(flight);
-        return 1;
     }
 
     @Override
