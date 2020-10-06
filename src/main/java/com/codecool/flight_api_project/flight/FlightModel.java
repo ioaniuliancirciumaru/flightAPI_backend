@@ -9,8 +9,8 @@ public class FlightModel
     private String flightNumber;
     private String departureAirport;
     private String arrivalAirport;
-    private Date departureDate;
-    private Date arrivalDate;
+    private String departureDate;
+    private String arrivalDate;
     private double price;
 //    private Airline airline;
 //    private Airplane airplane;
@@ -20,8 +20,8 @@ public class FlightModel
             String flightNumber,
             String departureAirport,
             String arrivalAirport,
-            Date departureDate,
-            Date arrivalDate,
+            String departureDate,
+            String arrivalDate,
             double price,
 //            Airline airline,
 //            Airplane airplane,
@@ -57,12 +57,12 @@ public class FlightModel
         return arrivalAirport;
     }
 
-    public Date getDepartureDate()
+    public String getDepartureDate()
     {
         return departureDate;
     }
 
-    public Date getArrivalDate()
+    public String getArrivalDate()
     {
         return arrivalDate;
     }

@@ -17,7 +17,6 @@ public class FlightService
         this.flightRepository = flightRepository;
     }
 
-    @Bean
     public int addFlight(FlightModel flightModel)
     {
         return flightRepository.insertFlight(flightModel);
