@@ -1,8 +1,10 @@
 package com.codecool.flight_api_project.flight;
 
 import jdk.jfr.DataAmount;
+import org.springframework.context.annotation.Bean;
 
 import java.util.Date;
+
 
 public class FlightModel
 {
@@ -15,6 +17,7 @@ public class FlightModel
 //    private Airline airline;
 //    private Airplane airplane;
     private double distanceInKm;
+
 
     public FlightModel(
             String flightNumber,

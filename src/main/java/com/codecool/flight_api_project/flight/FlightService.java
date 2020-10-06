@@ -1,7 +1,6 @@
 package com.codecool.flight_api_project.flight;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,9 +16,14 @@ public class FlightService
         this.flightRepository = flightRepository;
     }
 
+<<<<<<< HEAD
     public int addFlight(FlightModel flightModel)
+=======
+
+    public void addFlight(FlightModel flightModel)
+>>>>>>> 22fbf788c09a4d635fdc251880ccab1f11a639a3
     {
-        return flightRepository.insertFlight(flightModel);
+        flightRepository.insertFlight(flightModel);
     }
 
     public List<FlightModel> allFlights()
