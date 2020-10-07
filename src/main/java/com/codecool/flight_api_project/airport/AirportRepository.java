@@ -1,24 +1,33 @@
 package com.codecool.flight_api_project.airport;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Repository;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class AirportRepository implements AirportDAO{
+public class AirportRepository {
 
-    private static final List<AirportModel> DB = new ArrayList<>();
 
-    public AirportRepository() {
+    private static List<Airport> DB = new ArrayList<>();
+
+
+    public void populatedAirportsList() throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        DB = objectMapper.readValue(
+                new File("src/main/resources/airports.json"),
+                new TypeReference<List<Airport>>(){});
     }
 
-    public void insertAirport(AirportModel airport) {
+    public void insertAirport(Airport airport) {
         DB.add(airport);
     }
 
 
-    @Override
-    public List<AirportModel> selectAllAirports() {
+    public List<Airport> selectAllAirports() {
         return DB;
     }
 }

@@ -16,12 +16,12 @@ public class AirportService{
     }
 
 
-    public void addAirport(AirportModel airportModel)
+    public void addAirport(Airport airportModel)
     {
         airportRepository.insertAirport(airportModel);
     }
 
-    public  List<AirportModel> allAirports()
+    public  List<Airport> allAirports()
     {
         return airportRepository.selectAllAirports();
     }

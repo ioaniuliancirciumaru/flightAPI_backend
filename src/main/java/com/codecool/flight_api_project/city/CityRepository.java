@@ -17,12 +17,12 @@ public class CityRepository implements CityDAO{
 //    public CityRepository() {
 //    }
 
-    public void populatedCitiesList() throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        DB = objectMapper.readValue(
-                new File("src/main/resources/data.json"),
-                new TypeReference<List<CityModel>>(){});
-    }
+//    public void populatedCitiesList() throws IOException {
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        DB = objectMapper.readValue(
+//                new File("src/main/resources/data.json"),
+//                new TypeReference<List<CityModel>>(){});
+//    }
 
     public void insertCity(CityModel city) {
         DB.add(city);
