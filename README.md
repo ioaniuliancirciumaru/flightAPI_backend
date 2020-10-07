@@ -1,4 +1,4 @@
-###Airplane Ticket Finder
+#Airplane Ticket Finder
 
 Application to monitor airline flights based on price filtering in order to be able to always find the best plane tickets pricewise.
 
