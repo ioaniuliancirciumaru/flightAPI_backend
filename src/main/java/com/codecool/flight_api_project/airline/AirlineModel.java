@@ -1,30 +1,54 @@
 package com.codecool.flight_api_project.airline;
 
+import java.util.List;
+
 public class AirlineModel {
+    private int id;
     private String name;
-    private String airplane;
-    //    private List<Airplane> airplanes = new ArrayList<>();
+    private List<Integer> airplaneId;
+    private List<String> airports;
 
 
-    public AirlineModel(String name, String airplane) {
+    public AirlineModel(int id, String name, List<Integer> airplaneId, List<String> airports)
+    {
+        this.id = id;
         this.name = name;
-        this.airplane = airplane;
+        this.airplaneId = airplaneId;
+        this.airports = airports;
     }
 
-    public String getName() {
+    public AirlineModel()
+    {
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
+    public String getName()
+    {
         return name;
     }
 
-    public String getAirplane() {
-        return airplane;
+    public List<Integer> getAirplaneId()
+    {
+        return airplaneId;
+    }
+
+    public List<String> getAirports()
+    {
+        return airports;
     }
 
     @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("AirlineModel{");
-        sb.append("name='").append(name).append('\'');
-        sb.append(", airplane='").append(airplane).append('\'');
-        sb.append('}');
-        return sb.toString();
+    public String toString()
+    {
+        return "AirlineModel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", airplaneId=" + airplaneId +
+                ", airports=" + airports +
+                '}';
     }
 }
