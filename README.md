@@ -9,4 +9,4 @@ After buying the ticket you will receive an email with the confirmation.
 
 Travelling has never been easier!
 
-<img src="/assets/img/MarineGEO_logo.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+<img src="/Users/mark/Downloads/rebecca-cairns-wvpL1K6IhnI-unsplash.jpg" alt="Travel with us" style="height: 100px; width:100px;"/>
