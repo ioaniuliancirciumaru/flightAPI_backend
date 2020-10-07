@@ -1,0 +1,26 @@
+[
+  {
+    "cityIataCode": "BUC",
+    "countryIsoCode": "ROU",
+    "cityName": "Bucharest",
+    "airportsId": ["OTP", "BNS"]
+  },
+  {
+    "cityIataCode": "LON",
+    "countryIsoCode": "GBR",
+    "cityName": "London",
+    "airportsId": ["LHR", "LTN", "LGW", "LCY", "STN"]
+  },
+  {
+    "cityIataCode": "CLJ",
+    "countryIsoCode": "ROU",
+    "cityName": "Cluj",
+    "airportsId": ["CLJ"]
+  },
+  {
+    "cityIataCode": "PRS",
+    "countryIsoCode": "FRA",
+    "cityName": "Paris",
+    "airportsId": ["CDG", "ORY", "BVA"]
+  }
+]

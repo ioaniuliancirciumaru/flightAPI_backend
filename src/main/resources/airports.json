@@ -1,0 +1,46 @@
+[
+  {
+    "airportIataCode": "OTP",
+    "airportName": "Hennry Coanda"
+  },
+  {
+    "airportIataCode": "BNS",
+    "airportName": "Aurel Vlaicu Bucuresti"
+  },
+  {
+    "airportIataCode": "LHR",
+    "airportName": "Hethrow"
+  },
+  {
+    "airportIataCode": "LTN",
+    "airportName": "Luton"
+  },
+  {
+    "airportIataCode": "LGW",
+    "airportName": "Gatwick"
+  },
+  {
+    "airportIataCode": "LCY",
+    "airportName": "City"
+  },
+  {
+    "airportIataCode": "STN",
+    "airportName": "Stansted"
+  },
+  {
+    "airportIataCode": "CLJ",
+    "airportName": "Aurel Vlaicu Cluj"
+  },
+  {
+    "airportIataCode": "CDG",
+    "airportName": "Charles de Gaulle"
+  },
+  {
+    "airportIataCode": "ORY",
+    "airportName": "Orly"
+  },
+  {
+    "airportIataCode": "BVA",
+    "airportName": "Beauvais"
+  }
+]
