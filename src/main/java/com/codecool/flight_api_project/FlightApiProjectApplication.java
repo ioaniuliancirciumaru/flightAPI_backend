@@ -1,29 +1,38 @@
 package com.codecool.flight_api_project;
-import com.codecool.flight_api_project.airport.AirportModel;
+import com.codecool.flight_api_project.airline.AirlineRepository;
+import com.codecool.flight_api_project.airplane.AirplaneRepository;
 import com.codecool.flight_api_project.airport.AirportRepository;
-import com.codecool.flight_api_project.flight.FlightModel;
-import com.codecool.flight_api_project.flight.FlightRepository;
+import com.codecool.flight_api_project.city.CityRepository;
+import com.codecool.flight_api_project.user.UserRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import java.util.*;
 
+import java.io.IOException;
+
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+
+@EnableSwagger2
 @SpringBootApplication
-public class FlightApiProjectApplication
-{
+public class FlightApiProjectApplication{
 
-    public static FlightModel flightModel = new FlightModel("btf1308", "buc", "arad",
-            new Date(120 , Calendar.OCTOBER, 10),new Date(120, Calendar.NOVEMBER, 11),
-            45, 564);
+    public static void main(String[] args) throws IOException {
 
-    public static AirportModel airportModel = new AirportModel("Otopeni","OTP","Bucuresti",Arrays.asList(flightModel));
+        UserRepository userRepository = new UserRepository();
+        userRepository.populatedUsersList();
 
+        CityRepository cityRepository = new CityRepository();
+        cityRepository.populatedCitiesList();
 
-    public static void main(String[] args)
-    {
-        FlightRepository fr = new FlightRepository();
-        fr.insertFlight(flightModel);
-        AirportRepository ar =  new AirportRepository();
-        ar.insertAirport(airportModel);
+        AirportRepository airportRepository = new AirportRepository();
+        airportRepository.populatedAirportsList();
+
+        AirlineRepository airlineRepository = new AirlineRepository();
+        airlineRepository.populatedAirlinesList();
+
+        AirplaneRepository airplaneRepository = new AirplaneRepository();
+        airplaneRepository.populatedAirplanesList();
+
         SpringApplication.run(FlightApiProjectApplication.class, args);
     }
 

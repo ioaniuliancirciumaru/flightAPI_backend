@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "name": "Tarom",
+    "airplaneId": [2, 3, 5],
+    "airports": ["OTP", "BNS", "LHR", "CLJ", "CDG"]
+  },
+
+  {
+    "id": 2,
+    "name": "Air France",
+    "airplaneId": [1, 4, 5],
+    "airports": ["OTP", "LHR", "CDG", "ORY", "BVA"]
+  },
+
+  {
+    "id": 3,
+    "name": "British Airways",
+    "airplaneId": [1, 3, 4, 5],
+    "airports": ["OTP", "LHR", "CDG", "LTN", "LCY", "LGW", "STN"]
+  },
+
+  {
+    "id": 4,
+    "name": "Turkish Airlines",
+    "airplaneId": [1, 3, 4, 5],
+    "airports": ["OTP", "LHR", "CDG", "LGW", "STN"]
+  },
+
+  {
+    "id": 5,
+    "name": "LOT",
+    "airplaneId": [2, 3, 5],
+    "airports": ["OTP", "LHR", "CDG"]
+  }
+]

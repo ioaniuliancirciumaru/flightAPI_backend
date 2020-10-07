@@ -4,33 +4,38 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>60</y>
+      <x>0</x>
+      <y>50</y>
       <w>210</w>
-      <h>190</h>
+      <h>240</h>
     </coordinates>
     <panel_attributes>Flight
 --
-- fromAirport: Airport
-- toAirport: Airport
+- fromAirport: Airport.getId()
+- toAirport: Airport.id
 - departureDate: Date
+- arrivalDate: Date
+- price: Currency
+- airlineID: Airline.id
 - distanceInKm: double
-- aircraft: Airplane
+- aircraft: Airplane.id
 --</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>510</x>
-      <y>360</y>
-      <w>210</w>
+      <x>260</x>
+      <y>630</y>
+      <w>230</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>City
 --
-- arirports: ArrayList[Airport]
-
+- id: UUID
+- name: String
+- arirports: ArrayList&lt;Airport&gt;
+- country: String
 
 --</panel_attributes>
     <additional_attributes/>
@@ -39,29 +44,32 @@
     <id>UMLClass</id>
     <coordinates>
       <x>260</x>
-      <y>360</y>
+      <y>350</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>Airport
 --
 - iataCode: String
-- city: City
-- flights: ArrayList&lt;Flight&gt;
+- cityId: City.id
+
+
 --</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>760</x>
-      <y>360</y>
+      <x>500</x>
+      <y>50</y>
       <w>290</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>Airline
 --
-- airplanes: ArrayList&lt;Airplane&gt;
+- id: UUID
+- name: String
+- airplanes: ArrayList&lt;Airplane.id&gt;
 - airportsList: ArrayList&lt;Airport&gt;
 
 --</panel_attributes>
@@ -70,13 +78,77 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1090</x>
-      <y>360</y>
-      <w>210</w>
+      <x>780</x>
+      <y>350</y>
+      <w>270</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>Airplane
 --
+- id: UUID
+- AirplaneModelId: AirplaneModel.id
+
+
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>140</y>
+      <w>160</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>140</y>
+      <w>130</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0;110.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>530</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>90</y>
+      <w>320</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;300.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1100</x>
+      <y>350</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>AirplaneModel
+--
+- id: UUID
+- company: String
 - noOfSeats: int
 - speedInKmperHour: int
 
@@ -84,61 +156,14 @@
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>650</x>
-      <y>70</y>
-      <w>210</w>
-      <h>190</h>
-    </coordinates>
-    <panel_attributes>FlightInfo
---
-- name: String
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>250</y>
-      <w>420</w>
-      <h>130</h>
+      <x>1040</x>
+      <y>410</y>
+      <w>80</w>
+      <h>30</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>400.0;10.0;400.0;60.0;10.0;60.0;10.0;110.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>600</x>
-      <y>250</y>
-      <w>170</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>150.0;10.0;150.0;60.0;10.0;60.0;10.0;110.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>740</x>
-      <y>250</y>
-      <w>150</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0;130.0;60.0;130.0;110.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>740</x>
-      <y>250</y>
-      <w>480</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0;460.0;60.0;460.0;110.0</additional_attributes>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
   </element>
 </diagram>
