@@ -7,30 +7,42 @@ import java.util.List;
 
 public class CityModel {
 
-    private String name;
-    private List<AirportModel> airports = new ArrayList<>();
+    private final String cityIataCode;
+    private final String countryIsoCode;
+    private final String name;
+    private List<String> airportsId = new ArrayList<>();
 
-    public CityModel(String name, List<AirportModel> airports) {
+    public CityModel(String cityIataCode, String countryIsoCode, String name, List<String> airportsId) {
+        this.cityIataCode = cityIataCode;
+        this.countryIsoCode = countryIsoCode;
         this.name = name;
-        this.airports = airports;
+        this.airportsId = airportsId;
     }
 
-    public CityModel() {
+    public String getCityIataCode() {
+        return cityIataCode;
+    }
+
+    public String getCountryIsoCode() {
+        return countryIsoCode;
     }
 
     public String getName() {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return "CityModel{" +
-                "name='" + name + '\'' +
-                ", airports=" + airports +
-                '}';
+    public List<String> getAirportsId() {
+        return airportsId;
     }
 
-    public List<AirportModel> getAirports() {
-        return airports;
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("CityModel{");
+        sb.append("cityIataCode='").append(cityIataCode).append('\'');
+        sb.append(", countryIsoCode='").append(countryIsoCode).append('\'');
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", airportsId=").append(airportsId);
+        sb.append('}');
+        return sb.toString();
     }
 }

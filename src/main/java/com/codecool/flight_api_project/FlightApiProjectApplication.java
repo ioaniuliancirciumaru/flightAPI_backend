@@ -63,6 +63,8 @@ public class FlightApiProjectApplication{
 //        ar.insertAirport(airportModel);
         UserRepository userRepository = new UserRepository();
         userRepository.populatedUsersList();
+        CityRepository cityRepository = new CityRepository();
+        cityRepository.populatedCitiesList();
         SpringApplication.run(FlightApiProjectApplication.class, args);
     }
 

@@ -7,13 +7,15 @@ import java.util.List;
 
 public class AirportModel {
 
+    private String airportIataCode;
     public String name;
     public String iataCode;
     public String city;
     public List<FlightModel> flights =  new ArrayList<>();
 
 
-    public AirportModel(String name, String iataCode, String city, List<FlightModel> flights) {
+    public AirportModel(String airportIataCode, String name, String iataCode, String city, List<FlightModel> flights) {
+        this.airportIataCode = airportIataCode;
         this.name = name;
         this.iataCode = iataCode;
         this.city = city;
@@ -21,6 +23,10 @@ public class AirportModel {
     }
 
     public AirportModel() {
+    }
+
+    public String getAirportIataCode() {
+        return airportIataCode;
     }
 
     public String getName() {
