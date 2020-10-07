@@ -22,7 +22,7 @@ public class UserController {
     }
 
     @GetMapping("/list")
-    public List<User> list() throws IOException {
+    public List<User> list(){
         System.out.println(userService.list());
         return userService.list();
     }

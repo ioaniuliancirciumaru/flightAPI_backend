@@ -1,5 +1,4 @@
 package com.codecool.flight_api_project.city;
-import com.codecool.flight_api_project.user.User;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Repository;
@@ -21,6 +20,7 @@ public class CityRepository implements CityDAO{
                 new File("src/main/resources/cities.json"),
                 new TypeReference<List<CityModel>>(){});
     }
+
 
     public void insertCity(CityModel city) {
         DB.add(city);
