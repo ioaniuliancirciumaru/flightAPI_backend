@@ -17,11 +17,11 @@ public class UserService {
 
 
 
-    public void addUser(User user) throws IOException {
+    public void addUser(User user){
         userRepository.insertUser(user);
     }
 
-    public List<User> list() throws IOException {
+    public List<User> list(){
         return userRepository.findAll();
     }
 }

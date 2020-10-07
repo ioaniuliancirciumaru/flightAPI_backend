@@ -1,5 +1,4 @@
 package com.codecool.flight_api_project.airline;
-import com.codecool.flight_api_project.airport.AirportModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,7 +1,5 @@
 package com.codecool.flight_api_project.city;
 
-import com.codecool.flight_api_project.airport.AirportModel;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
