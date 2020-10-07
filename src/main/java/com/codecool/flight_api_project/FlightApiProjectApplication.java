@@ -33,33 +33,32 @@ public class FlightApiProjectApplication{
 //
 //    public static AirportModel airportModel = new AirportModel("Otopeni","OTP","Bucuresti",Arrays.asList(flightModel));
 
-    public static CityModel cityModel = new CityModel("Rome", Arrays.asList(airportModel));
+//    public static CityModel cityModel = new CityModel("Rome", Arrays.asList(airportModel));
 
 
-    public static AirplaneModel airplaneModel = new AirplaneModel("Boeing 747",250,880.00);
+//    public static AirplaneModel airplaneModel = new AirplaneModel("Boeing 747",250,880.00);
 
-    public static AirlineModel airlineModel = new AirlineModel("Tarom", "B-737");
+//    public static AirlineModel airlineModel = new AirlineModel("Tarom", "B-737");
 
 
 
-    public static void main(String[] args)
-    {
-        FlightRepository fr = new FlightRepository();
-        fr.insertFlight(flightModel);
-        AirportRepository ar =  new AirportRepository();
-        ar.insertAirport(airportModel);
-        CityRepository cr = new CityRepository();
-        cr.insertCity(cityModel);
-        AirplaneRepository am = new AirplaneRepository();
-        am.insertAirplane(airplaneModel);
-        AirlineRepository airlineRepository = new AirlineRepository();
-        airlineRepository.insertAirline(airlineModel);
+    public static void main(String[] args) throws IOException {
+//        FlightRepository fr = new FlightRepository();
+//        fr.insertFlight(flightModel);
+//        AirportRepository ar =  new AirportRepository();
+//        ar.insertAirport(airportModel);
+//        CityRepository cr = new CityRepository();
+//        cr.insertCity(cityModel);
+//        AirplaneRepository am = new AirplaneRepository();
+//        am.insertAirplane(airplaneModel);
+//        AirlineRepository airlineRepository = new AirlineRepository();
+//        airlineRepository.insertAirline(airlineModel);
 
 //        FlightRepository fr = new FlightRepository();
 //        fr.insertFlight(flightModel);
 //        AirportRepository ar =  new AirportRepository();
 //        ar.insertAirport(airportModel);
-        UserRepository userRepository =new UserRepository();
+        UserRepository userRepository = new UserRepository();
         userRepository.populatedUsersList();
         SpringApplication.run(FlightApiProjectApplication.class, args);
     }
