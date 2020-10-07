@@ -16,12 +16,7 @@ public class FlightService
         this.flightRepository = flightRepository;
     }
 
-<<<<<<< HEAD
-    public int addFlight(FlightModel flightModel)
-=======
-
     public void addFlight(FlightModel flightModel)
->>>>>>> 22fbf788c09a4d635fdc251880ccab1f11a639a3
     {
         flightRepository.insertFlight(flightModel);
     }
