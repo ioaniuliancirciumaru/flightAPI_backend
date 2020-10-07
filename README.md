@@ -9,4 +9,4 @@ After buying the ticket you will receive an email with the confirmation.
 
 Travelling has never been easier!
 
-(https://www.wallpaperflare.com/the-beautiful-koh-samui-coast-of-thailand-mu-ko-ang-thong-national-park-thailand-hd-wallpaper-1920%C3%971200-wallpaper-bqwho)
+<img src="/assets/img/MarineGEO_logo.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
