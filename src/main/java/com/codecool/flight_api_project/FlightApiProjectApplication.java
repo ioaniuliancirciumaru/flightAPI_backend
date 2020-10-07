@@ -11,8 +11,10 @@ import com.codecool.flight_api_project.flight.FlightModel;
 import com.codecool.flight_api_project.flight.FlightRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import java.util.*;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.util.*;
+@EnableSwagger2
 @SpringBootApplication
 public class FlightApiProjectApplication
 {
