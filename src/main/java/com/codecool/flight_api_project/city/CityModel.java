@@ -8,57 +8,45 @@ import java.util.UUID;
 
 public class CityModel {
 
-    private UUID id;
-    private String name;
-    private List<AirportModel> airports = new ArrayList<>();
-    private String country;
+    private String cityIataCode;
+    private String countryIsoCode;
+    private String cityName;
+    private List<String> airportsId = new ArrayList<>();
 
-    public CityModel(String name, List<AirportModel> airports, String country)
-    {
-        this.id = UUID.randomUUID();
-        this.name = name;
-        this.airports = airports;
-        this.country = country;
+    public CityModel(String cityIataCode, String countryIsoCode, String cityName, List<String> airportsId) {
+        this.cityIataCode = cityIataCode;
+        this.countryIsoCode = countryIsoCode;
+        this.cityName = cityName;
+        this.airportsId = airportsId;
     }
 
     public CityModel() {
     }
 
-    public UUID getId()
-    {
-        return id;
+    public String getCityIataCode() {
+        return cityIataCode;
     }
 
-    public String getName()
-    {
-        return name;
+    public String getCountryIsoCode() {
+        return countryIsoCode;
     }
 
-    public List<AirportModel> getAirports()
-    {
-        return airports;
+    public String getCityName() {
+        return cityName;
     }
 
-    public String getCountry()
-    {
-        return country;
+    public List<String> getAirportsId() {
+        return airportsId;
     }
-
-    public void addAirport(AirportModel airport)
-    {
-        this.airports.add(airport);
-        System.out.println("Airport: " + airport + " added to airports list");
-    }
-
 
     @Override
-    public String toString()
-    {
-        return "CityModel{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", airports=" + airports +
-                ", country='" + country + '\'' +
-                '}';
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("CityModel{");
+        sb.append("cityIataCode='").append(cityIataCode).append('\'');
+        sb.append(", countryIsoCode='").append(countryIsoCode).append('\'');
+        sb.append(", cityName='").append(cityName).append('\'');
+        sb.append(", airportsId=").append(airportsId);
+        sb.append('}');
+        return sb.toString();
     }
 }
