@@ -1,23 +1,27 @@
 package com.codecool.flight_api_project.flight;
 
+
 import com.codecool.flight_api_project.airline.AirlineModel;
 import com.codecool.flight_api_project.airline.AirlineRepository;
 import com.codecool.flight_api_project.airport.Airport;
 import com.codecool.flight_api_project.airport.AirportRepository;
+
+
 import com.codecool.flight_api_project.city.CityModel;
 import com.codecool.flight_api_project.city.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
 public class FlightService
 {
+
     @Autowired
     private final FlightRepository flightRepository;
 

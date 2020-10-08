@@ -1,19 +1,18 @@
 package com.codecool.flight_api_project.flight;
 
 import com.codecool.flight_api_project.airline.AirlineModel;
-import com.codecool.flight_api_project.airport.Airport;
+import com.codecool.flight_api_project.airplane.AirplaneModel;
+
 import com.codecool.flight_api_project.city.CityModel;
-import jdk.jfr.DataAmount;
-import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
 public class FlightModel
 {
+
 
     private CityModel departureAirport;
     private CityModel arrivalAirport;
@@ -26,8 +25,7 @@ public class FlightModel
             CityModel departureAirport,
             CityModel arrivalAirport,
             LocalDate date,
-            List<AirlineModel> airlineModels )
-    {
+            List<AirlineModel> airlineModels ) {
 
         this.departureAirport = departureAirport;
         this.arrivalAirport = arrivalAirport;
@@ -40,9 +38,11 @@ public class FlightModel
     {
     }
 
+
     public List<AirlineModel> getAirlineModels() {
         return airlineModels;
     }
+
 
     public CityModel getDepartureAirport()
     {
@@ -53,6 +53,7 @@ public class FlightModel
     {
         return arrivalAirport;
     }
+
 
     public LocalDate getDate() {
         return date;
@@ -66,5 +67,6 @@ public class FlightModel
         sb.append(", date=").append(date);
         sb.append('}');
         return sb.toString();
+
     }
 }

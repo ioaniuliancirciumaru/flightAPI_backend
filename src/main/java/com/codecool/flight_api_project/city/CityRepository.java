@@ -11,6 +11,8 @@ import java.util.List;
 @Repository
 public class CityRepository implements CityDAO{
 
+    public CityRepository(){};
+
     private static List<CityModel> DB = new ArrayList<>();
 
 
