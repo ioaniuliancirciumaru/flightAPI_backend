@@ -1,108 +1,70 @@
 package com.codecool.flight_api_project.flight;
 
+import com.codecool.flight_api_project.airline.AirlineModel;
+import com.codecool.flight_api_project.airport.Airport;
+import com.codecool.flight_api_project.city.CityModel;
 import jdk.jfr.DataAmount;
 import org.springframework.context.annotation.Bean;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 public class FlightModel
 {
-    private String flightNumber;
-    private String departureAirport;
-    private String arrivalAirport;
-    private Date departureDate;
-    private Date arrivalDate;
-    private double price;
-//    private Airline airline;
-//    private Airplane airplane;
-    private double distanceInKm;
+
+    private CityModel departureAirport;
+    private CityModel arrivalAirport;
+    private LocalDate date;
+    private List<AirlineModel> airlineModels = new ArrayList<>();
+
 
 
     public FlightModel(
-            String flightNumber,
-            String departureAirport,
-            String arrivalAirport,
-            Date departureDate,
-            Date arrivalDate,
-            double price,
-//            Airline airline,
-//            Airplane airplane,
-            double distanceInKm)
+            CityModel departureAirport,
+            CityModel arrivalAirport,
+            LocalDate date,
+            List<AirlineModel> airlineModels )
     {
-        this.flightNumber = flightNumber;
+
         this.departureAirport = departureAirport;
         this.arrivalAirport = arrivalAirport;
-        this.departureDate = departureDate;
-        this.arrivalDate = arrivalDate;
-        this.price = price;
-//        this.airline = airline;
-//        this.airplane = airplane;
-        this.distanceInKm = distanceInKm;
+        this.date = date;
+        this.airlineModels = airlineModels;
+
     }
 
     public FlightModel()
     {
     }
 
-    public String getFlightNumber()
-    {
-        return flightNumber;
+    public List<AirlineModel> getAirlineModels() {
+        return airlineModels;
     }
 
-    public String getDepartureAirport()
+    public CityModel getDepartureAirport()
     {
         return departureAirport;
     }
 
-    public String getArrivalAirport()
+    public CityModel getArrivalAirport()
     {
         return arrivalAirport;
     }
 
-    public Date getDepartureDate()
-    {
-        return departureDate;
-    }
-
-    public Date getArrivalDate()
-    {
-        return arrivalDate;
-    }
-
-    public double getPrice()
-    {
-        return price;
-    }
-
-//    public Airline getAirline()
-//    {
-//        return airline;
-//    }
-//
-//    public Airplane getAirplane()
-//    {
-//        return airplane;
-//    }
-
-    public double getDistanceInKm()
-    {
-        return distanceInKm;
+    public LocalDate getDate() {
+        return date;
     }
 
     @Override
-    public String toString()
-    {
-        return "FlightModel{" +
-                "flightNumber='" + flightNumber + '\'' +
-                ", departureAirport='" + departureAirport + '\'' +
-                ", arrivalAirport='" + arrivalAirport + '\'' +
-                ", departureDate=" + departureDate +
-                ", arrivalDate=" + arrivalDate +
-                ", price=" + price +
-//                ", airline=" + airline +
-//                ", airplane=" + airplane +
-                ", distanceInKm=" + distanceInKm +
-                '}';
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("FlightModel{");
+        sb.append("departureAirport=").append(departureAirport);
+        sb.append(", arrivalAirport=").append(arrivalAirport);
+        sb.append(", date=").append(date);
+        sb.append('}');
+        return sb.toString();
     }
 }

@@ -6,15 +6,15 @@ public class AirlineModel {
     private int id;
     private String name;
     private List<Integer> airplaneId;
-    private List<String> airports;
 
 
-    public AirlineModel(int id, String name, List<Integer> airplaneId, List<String> airports)
+
+    public AirlineModel(int id, String name, List<Integer> airplaneId)
     {
         this.id = id;
         this.name = name;
         this.airplaneId = airplaneId;
-        this.airports = airports;
+
     }
 
     public AirlineModel()
@@ -36,10 +36,7 @@ public class AirlineModel {
         return airplaneId;
     }
 
-    public List<String> getAirports()
-    {
-        return airports;
-    }
+
 
     @Override
     public String toString()
@@ -48,7 +45,6 @@ public class AirlineModel {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", airplaneId=" + airplaneId +
-                ", airports=" + airports +
                 '}';
     }
 }

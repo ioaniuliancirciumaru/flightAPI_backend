@@ -22,5 +22,11 @@
     "countryIsoCode": "FRA",
     "cityName": "Paris",
     "airportsId": ["CDG", "ORY", "BVA"]
+  },
+  {
+    "cityIataCode": "BRL",
+    "countryIsoCode": "DEU",
+    "cityName": "Berlin",
+    "airportsId": ["TXL", "SXF"]
   }
 ]

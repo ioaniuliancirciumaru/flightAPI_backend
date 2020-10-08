@@ -2,6 +2,7 @@ package com.codecool.flight_api_project.city;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 public class CityModel {
@@ -35,6 +36,23 @@ public class CityModel {
 
     public List<String> getAirportsId() {
         return airportsId;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CityModel cityModel = (CityModel) o;
+        return Objects.equals(cityIataCode, cityModel.cityIataCode) &&
+                Objects.equals(countryIsoCode, cityModel.countryIsoCode) &&
+                Objects.equals(cityName, cityModel.cityName) &&
+                Objects.equals(airportsId, cityModel.airportsId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cityIataCode, countryIsoCode, cityName, airportsId);
     }
 
     @Override

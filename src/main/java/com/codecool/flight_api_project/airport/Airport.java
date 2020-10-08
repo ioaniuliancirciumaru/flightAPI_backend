@@ -9,11 +9,13 @@ public class Airport {
 
     private String airportIataCode;
     private String airportName;
+    private List<Integer> airlinesID;
 
 
-    public Airport(String airportIataCode, String airportName) {
+    public Airport(String airportIataCode, String airportName, List<Integer> airlinesID) {
         this.airportIataCode = airportIataCode;
         this.airportName = airportName;
+        this.airlinesID = airlinesID;
     }
 
     public Airport() {
@@ -25,6 +27,10 @@ public class Airport {
 
     public String getAirportName() {
         return airportName;
+    }
+
+    public List<Integer> getAirlinesID() {
+        return airlinesID;
     }
 
     @Override
