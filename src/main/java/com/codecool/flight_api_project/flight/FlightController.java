@@ -1,6 +1,5 @@
 package com.codecool.flight_api_project.flight;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -10,7 +9,7 @@ import java.util.List;
 public class FlightController
 {
     @Autowired
-    private final FlightService flightService;
+    private FlightService flightService;
 
     public FlightController(FlightService flightService)
     {
@@ -20,6 +19,11 @@ public class FlightController
     @GetMapping
     public List<FlightModel> allFlights(){
         return flightService.allFlights();
+    }
+
+    @GetMapping("/{from}/{to}")
+    public List<FlightModel> getFlights(@PathVariable String from, @PathVariable String to){
+        return flightService.searchFlights(from, to);
     }
 
     @PostMapping
