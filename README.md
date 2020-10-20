@@ -12,7 +12,7 @@ After buying the ticket you will receive an email with the confirmation.
 
 Travelling has never been easier!
 
-## The [front-end](https://github.com/AlexandruOriean/flightAPI_frontend) of the app.
+## The [front-end](https://github.com/ioaniuliancirciumaru/flightAPI_frontend) of the app.
 
 ![Index page of the app](/img/index-page.png "Index page")
 
