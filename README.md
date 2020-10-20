@@ -13,3 +13,11 @@ After buying the ticket you will receive an email with the confirmation.
 Travelling has never been easier!
 
 
+![Index page of the app](/img/index-page.png "Index page")
+
+![Swagger API documentation](/img/swagger_API_documentation.png "Swagger")
+
+
+
+
+
